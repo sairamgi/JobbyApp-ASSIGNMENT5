@@ -3,17 +3,18 @@ import {AiFillStar} from 'react-icons/ai'
 import './index.css'
 
 const SimilarJobs = props => {
-  const {SimilarJobData} = props
+  const {similarJobData} = props
   const {
     companyLogoUrl,
-    employmentType,
     id,
     jobDescription,
+    employmentType,
     location,
     rating,
     title,
-  } = SimilarJobData
-  console.log(SimilarJobData)
+  } = similarJobData
+
+  console.log(similarJobData)
 
   return (
     <li className="similat-job-li-container">

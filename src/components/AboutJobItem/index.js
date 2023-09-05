@@ -21,6 +21,7 @@ class AboutJobItem extends Component {
     similarJobsData: [],
     apiStatus: apiStatusConstants.initial,
   }
+
   componentDidMount() {
     this.getJobData()
   }
@@ -124,7 +125,7 @@ class AboutJobItem extends Component {
                 <div className="location-job-type-container">
                   <div className="location-icon-location-container">
                     <MdLocationOn className="location-icon" />
-                    <p className="location">{employment}</p>
+                    <p className="location">{location}</p>
                   </div>
                   <div className="employment-type-icon-employment-type-container">
                     <p className="job-type">{employmentType}</p>
@@ -181,9 +182,11 @@ class AboutJobItem extends Component {
     }
     return null
   }
+
   onRetryJobDetailsAgain = () => {
     this.getJobData()
   }
+
   renderJobFailureView = () => (
     <div className="job-details-failure-view">
       <img
@@ -203,11 +206,13 @@ class AboutJobItem extends Component {
       </div>
     </div>
   )
+
   renderJobLoadingView = () => (
     <div className="job-details-loader" data-testid="loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
+
   renderJobDetails = () => {
     const {apiStatus} = this.state
 
